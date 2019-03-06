@@ -1,7 +1,7 @@
 var cards = [{
         rank: 'Queen',
         suit: 'hearts',
-        cardImage: 'images/queen-of-heats.png'
+        cardImage: 'images/queen-of-hearts.png'
     },
     {
         rank: 'Queen',
@@ -36,13 +36,12 @@ var flipCard = function() {
     var cardId = this.getAttribute('data-id');
     // console.log('User flipped a ' + cards[cardId].rank + ' of ' + cards[cardId].suit + '.');
     // console.log('Image can be found here; ' + cards[cardId].cardImage);
-    cardsInPlay.push(cards[].rank);
-
+    cardsInPlay.push(cards[cardId].rank);
+    this.setAttribute('src', cards[cardId].cardImage);
     checkForMatch();
 };
 
 var checkForMatch = function() {
-    this.setAttribute('src', cards[].cardImage);
     if (cardsInPlay[0] === cardsInPlay[1]) {
         console.log('You found a match!');
     } else {
