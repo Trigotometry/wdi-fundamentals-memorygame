@@ -1,4 +1,5 @@
-var cards = [{
+var cards = [
+    {
         rank: 'Queen',
         suit: 'hearts',
         cardImage: 'images/queen-of-hearts.png'
